@@ -1,0 +1,24 @@
+.home-container-fluid {
+    height: 100vh;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2vh;
+}
+
+.background-image-color {
+    /* background-color: #888888; */
+    /* background-image: url(../src/assets/images/bg.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.background-gradient {
+    background-color: #ececec;
+    /* background: linear-gradient(45deg, rgba(235, 235, 235, 0.3), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1), rgba(231, 231, 231, 0.4), rgba(255, 255, 255, 0.3)); */
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradient 5s infinite alternate;
+}

@@ -1,0 +1,94 @@
+.header-holder {
+    padding: 0vh 2vh;
+    height: 10vh;
+}
+
+.logo-title-one,
+.logo-title-two {
+    font-family: 'space_age';
+    color: #094067;
+    font-size: 6vh;
+}
+
+
+
+.navbar-holder nav {
+    text-align: left;
+    font-family: 'chronosfer-demo';
+}
+
+.home-navbar-link a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 2.1vh;
+}
+
+.home-navbar-link a:hover {
+    text-shadow: 0px 0px 10px #fff;
+}
+
+.hb-icon-one,
+.hb-icon-two {
+    width: 2vw;
+    height: .3vh;
+    background-color: #094067;
+    margin: .7vh 0;
+    transition: 0.4s;
+}
+
+.hb-icon-holder {
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hb-icon-holder.active .hb-icon-one {
+    transform: translate(0, .50vh) rotate(-35deg);
+    background-color: #90b4ce;
+}
+
+.hb-icon-holder.active .hb-icon-two {
+    transform: translate(0, -.50vh) rotate(35deg);
+    background-color: #90b4ce;
+}
+
+.pages-navbar {
+    position: absolute !important;
+    top: -2vh;
+    right: -27vw;
+    box-shadow: 0px 0px 7px 1px #747474;
+    height: 100vh;
+    padding: 10vh 4vh;
+    z-index: 5;
+    background-color: #094067;
+    transition: 1s;
+}
+
+.pages-navbar.active {
+    right: -4vw;
+}
+
+.pages-navbar.active .navbar-holder nav a {
+    color: #90b4ce;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: right;
+
+}
+
+.menu-title p {
+    font-size: 2.5vh;
+    margin-right: 2vw;
+    z-index: 10;
+    color: #094067;
+    transition: all 2s linear;
+    font-weight: 400;
+}
+
+.menu-title.active p {
+    display: none;
+}
