@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBs8Ed6McxPT3JGSNXwHOWfUFyjPPP2C9Q",
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
     authDomain: "mp2-lms-project.firebaseapp.com",
     projectId: "mp2-lms-project",
     storageBucket: "mp2-lms-project.appspot.com",
