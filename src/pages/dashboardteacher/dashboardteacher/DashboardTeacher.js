@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
-import StudentsNavigation from "../../../components/dashboardcomponents/studentscomponents/studentsnavigation/StudentsNavigation";
 import StudentsRightPanelTop from "../../../components/dashboardcomponents/studentscomponents/studentsrighpaneltop/StudentsRightPanelTop";
 import StudentsSchedule from "../../../components/dashboardcomponents/studentscomponents/studentsschedule/StudentsSchedule";
 import { useState } from "react";
+import TeachersNavigation from "../../../components/dashboardcomponents/teacherscomponents/teachersnavigation/TeachersNavigation";
 
-function DashboardStudent() {
+function DashboardTeacher() {
 
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -17,7 +17,7 @@ function DashboardStudent() {
                 <div className="home-container-fluid">
                     <div className="pages-row">
                         <div className={click ? 'pages-col-2 sn-outer active' : 'pages-col-2 sn-outer'}>
-                            <StudentsNavigation />
+                            <TeachersNavigation />
                         </div>
                         <div className={click ? 'pages-col-10 md-outer active' : 'pages-col-10 md-outer'}>
                             <div className="pages-row">
@@ -74,4 +74,4 @@ function DashboardStudent() {
     )
 }
 
-export default DashboardStudent;
+export default DashboardTeacher;

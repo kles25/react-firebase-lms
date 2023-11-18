@@ -1,0 +1,62 @@
+.cu-button-holder {
+    justify-content: right;
+}
+
+.cu-button-holder button {
+    width: 7vw;
+    height: 4.5vh;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    background-color: #d8eefe;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6vh;
+    color: #094067;
+    transition: .5s;
+}
+
+.cu-button-holder button:hover {
+    box-shadow: 0px 0px 11px 5px rgba(255, 255, 255, 0) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px rgba(255, 255, 255, 0) inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(255, 255, 255, 0) inset;
+    background-color: #094067;
+    color: #d8eefe;
+    border-radius: 1vh;
+}
+
+.cu-button-holder button a {
+    text-decoration: none;
+    color: #094067;
+}
+
+
+
+
+.cu-button-holder button a:hover {
+
+    color: #fffffe;
+}
+
+@media (max-width: 1200px) {
+    .cu-button-holder button {
+        width: 12vh;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .cu-button-holder button {
+        width: 12vh;
+    }
+
+}
+
+
+@media (max-width: 690px) {
+    .cu-button-holder button {
+        width: 12vh;
+    }
+
+}

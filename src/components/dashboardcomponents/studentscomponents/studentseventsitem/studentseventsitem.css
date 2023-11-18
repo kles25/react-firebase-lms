@@ -1,0 +1,28 @@
+.sched-events {
+    margin-bottom: 1vh;
+    padding: 1vh;
+    box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.2) inset;
+    background-color: #d8eefe;
+    border-radius: 1vh;
+}
+
+.session-events,
+.mentor-events {
+    color: #5f6c7b;
+    font-size: 1.3vh;
+    font-weight: 600;
+}
+
+.title-events {
+    color: #094067;
+    font-size: 1.7vh;
+}
+
+.time-events {
+    color: #094067;
+    font-size: 1.5vh;
+    margin: auto;
+    font-weight: 600;
+}

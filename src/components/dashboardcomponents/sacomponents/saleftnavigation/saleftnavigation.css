@@ -1,8 +1,8 @@
-.db-ln-outer {
-    padding: 0 1vh;
+.sa-ln-outer {
+    padding-right: 1vh;
 }
 
-.db-left-navbar {
+.sa-left-navbar {
     height: 97vh;
     padding: 2vh 1vh;
     background-color: #fffffe;
@@ -12,20 +12,20 @@
     border-radius: 1vh;
 }
 
-.db-title-logo {
+.sa-title-logo {
     text-align: center;
     font-family: 'space_age';
     color: #094067;
     font-size: 6vh;
 }
 
-.db-nav-links {
+.sa-nav-links {
     color: #094067;
     transition: .5s;
     margin-bottom: 2vh;
 }
 
-.db-nav-links:hover {
+.sa-nav-links:hover {
     box-shadow: 0px 0px 32px 7px rgba(0, 0, 0, 0.2) inset;
     -webkit-box-shadow: 0px 0px 32px 7px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0px 0px 32px 7px rgba(0, 0, 0, 0.2) inset;
@@ -33,7 +33,7 @@
     border-radius: 1vh;
 }
 
-.db-nav-links.active {
+.sa-nav-links.active {
     box-shadow: 0px 0px 32px 7px rgba(0, 0, 0, 0.2) inset;
     -webkit-box-shadow: 0px 0px 32px 7px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0px 0px 32px 7px rgba(0, 0, 0, 0.2) inset;
@@ -43,7 +43,7 @@
 
 
 
-.db-nav-links a {
+.sa-nav-links a {
     margin-left: 1vh;
     padding: 1.5vh;
     cursor: pointer;
@@ -55,6 +55,6 @@
     align-items: center;
 }
 
-.db-nav-links a svg {
+.sa-nav-links a svg {
     margin-right: 1vh;
 }

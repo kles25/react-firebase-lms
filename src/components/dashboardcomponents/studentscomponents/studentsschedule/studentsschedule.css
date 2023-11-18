@@ -1,0 +1,50 @@
+.ue-section-content {
+    margin-top: 2vh;
+    padding: 2vh;
+    height: 42.5vh;
+    background-color: #fffffe;
+    box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1vh;
+}
+
+.ue-header-holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ue-header-holder svg {
+    color: #094067;
+    font-size: 2.7vh;
+}
+
+.ue-title {
+    color: #094067;
+    font-size: 2vh;
+}
+
+.ue-nav-links {
+    padding: .2vh 0 !important;
+    color: #90b4ce !important;
+    text-align: center !important;
+    text-transform: capitalize !important;
+    font-size: 1.7vh !important;
+    font-weight: 600 !important;
+}
+
+.events-holder {
+    overflow-y: scroll;
+    height: 30vh;
+    padding: 0 .5vh;
+}
+
+@media (max-width: 1200px) {
+    .ue-section-content {
+        padding: 1vh;
+    }
+
+    .ue-header-holder {
+        margin-top: 1vh;
+    }
+}

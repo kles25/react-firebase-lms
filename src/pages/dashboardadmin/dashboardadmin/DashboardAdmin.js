@@ -1,12 +1,10 @@
 import { Outlet } from "react-router-dom";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
-import StudentsNavigation from "../../../components/dashboardcomponents/studentscomponents/studentsnavigation/StudentsNavigation";
-import StudentsRightPanelTop from "../../../components/dashboardcomponents/studentscomponents/studentsrighpaneltop/StudentsRightPanelTop";
-import StudentsSchedule from "../../../components/dashboardcomponents/studentscomponents/studentsschedule/StudentsSchedule";
 import { useState } from "react";
+import AdminNavigation from "../../../components/dashboardcomponents/admincomponents/adminnavigation/AdminNavigation";
 
-function DashboardStudent() {
+function DashboardAdmin() {
 
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -17,7 +15,7 @@ function DashboardStudent() {
                 <div className="home-container-fluid">
                     <div className="pages-row">
                         <div className={click ? 'pages-col-2 sn-outer active' : 'pages-col-2 sn-outer'}>
-                            <StudentsNavigation />
+                            <AdminNavigation />
                         </div>
                         <div className={click ? 'pages-col-10 md-outer active' : 'pages-col-10 md-outer'}>
                             <div className="pages-row">
@@ -52,17 +50,12 @@ function DashboardStudent() {
                                 </div>
                                 <div className="pages-col-12">
                                     <div className="pages-row">
-                                        <div className="pages-col-9 db-section-holder">
+                                        <div className="pages-col-12 db-section-holder">
                                             <div className="db-section-content">
                                                 <Outlet />
                                             </div>
                                         </div>
-                                        <div className="pages-col-3 hn-outer">
-                                            <div className="hn-holder">
-                                                <StudentsRightPanelTop />
-                                                <StudentsSchedule />
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -74,4 +67,4 @@ function DashboardStudent() {
     )
 }
 
-export default DashboardStudent;
+export default DashboardAdmin;

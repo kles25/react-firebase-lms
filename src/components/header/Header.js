@@ -1,5 +1,5 @@
 import "./header.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -10,7 +10,9 @@ function Header() {
 
     const navLinks = [
         { text: 'HOME', path: '/' },
-        { text: 'DASHBOARD', path: '/student/home' },
+        { text: 'STUDENTS DB', path: '/student/home' },
+        { text: 'TEACHERS DB', path: '/teacher/home' },
+        { text: 'ADMIN DB', path: '/admin/home' },
         // Add more links as needed
     ];
 
@@ -38,7 +40,7 @@ function Header() {
                             <div className={click ? 'pages-col-12 pages-navbar active' : 'pages-col-12 pages-navbar'}>
                                 <div className="pages-row navbar-holder">
                                     {navLinks.map((link, index) => (
-                                        <nav key={index} className="home-navbar-link pages-col-4">
+                                        <nav key={index} className="home-navbar-link pages-col-12">
                                             <Link to={link.path}>{link.text}</Link>
                                         </nav>
                                     ))}
