@@ -2,7 +2,6 @@ import "./adduser.css"
 import React, { useEffect, useState } from "react";
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 import {
-
     doc,
     serverTimestamp,
     setDoc,
@@ -10,7 +9,8 @@ import {
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { db, auth, storage } from "../../../../config/firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 const AddUser = ({ inputs, title }) => {
@@ -90,8 +90,9 @@ const AddUser = ({ inputs, title }) => {
 
     return (
         <div className="add-user-profile">
-            <div className="">
-                <h2 className="db-title">{title}</h2>
+            <div className="db-header-holder">
+                <Link className="editsss" style={{ textDecoration: "none" }} to='/admin/users'><ArrowBackIcon /><h3 className="db-edit">Back to List</h3></Link>
+                <h2 className="db-edit">{title}</h2>
             </div>
             <div className="pages-row form-holder">
                 <div className="pages-col-6 image-upload">
@@ -143,7 +144,7 @@ const AddUser = ({ inputs, title }) => {
                                 )}
                             </div>
                         ))}
-                        <button className="form-button" disabled={per !== null && per < 100} type="submit">Send</button>
+                        <button className="form-button" disabled={per !== null && per < 100} type="submit">Add</button>
                     </form>
                 </div>
             </div>

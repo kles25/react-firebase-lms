@@ -64,7 +64,7 @@ export const userInputs = [
 
 ];
 
-export const productInputs = [
+export const courseInputs = [
     {
         id: 1,
         label: "Title",

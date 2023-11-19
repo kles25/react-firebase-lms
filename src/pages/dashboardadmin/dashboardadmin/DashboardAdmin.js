@@ -24,7 +24,6 @@ function DashboardAdmin() {
                                         <div className="pages-row db-top-navbar">
                                             <div className="pages-col-10">
                                                 <div className="hidden-navs">
-
                                                     <div className={click ? 'db-hb-icon-holder active' : 'db-hb-icon-holder'} onClick={handleClick}>
                                                         <div className="db-hb-icon-one"></div>
                                                         <div className="db-hb-icon-two"></div>
@@ -42,7 +41,6 @@ function DashboardAdmin() {
                                                         <SettingsIcon />
                                                     </nav>
                                                     <img className="db-user-profile" alt="Icon" src="https://images.pexels.com/photos/1521306/pexels-photo-1521306.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-
                                                 </div>
                                             </div>
                                         </div>

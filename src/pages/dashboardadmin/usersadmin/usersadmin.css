@@ -1,5 +1,6 @@
 .cu-button-holder {
     justify-content: right;
+    margin-bottom: 2vh;
 }
 
 .cu-button-holder button {
@@ -31,12 +32,134 @@
     color: #094067;
 }
 
-
-
-
 .cu-button-holder button a:hover {
 
     color: #fffffe;
+}
+
+
+.user-details-holder {
+    padding: 2vh 2vh;
+}
+
+.db-profile-img {
+    height: 30vh;
+    width: 30vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.db-header-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+.editsss {
+    display: flex;
+    align-items: center;
+}
+
+.editsss svg {
+    transition: 1s;
+    font-size: 3vh;
+    color: #094067;
+}
+
+.editsss svg:hover {
+    color: #3da9fc;
+}
+
+.db-edit {
+    margin-left: 1vh;
+    font-size: 2.1vh;
+    color: #094067;
+    font-weight: 500;
+}
+
+.db-up-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.db-up-holder label {
+    font-size: 1.8vh;
+    color: #094067;
+    text-transform: capitalize;
+}
+
+.db-up-holder input {
+    padding: .5vh;
+    font-size: 1.8vh;
+    width: 60%;
+    height: 4.5vh;
+    color: #094067;
+    text-transform: capitalize;
+    border-radius: 1vh;
+    border: 1px solid #094067;
+    margin-bottom: 1vh;
+    margin-top: .5vh;
+}
+
+.db-up-holder input.lowercase-up {
+    text-transform: lowercase !important;
+}
+
+.db-up-holder button {
+    padding: .5vh;
+    font-size: 1.8vh;
+    width: 60%;
+    height: 4.5vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    margin-top: .5vh;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    background-color: #d8eefe;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    color: #094067;
+    transition: .5s;
+}
+
+.db-up-holder button:hover {
+    background-color: #094067;
+    color: #d8eefe;
+}
+
+.user-details-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+.notification-up {
+    position: absolute;
+
+    border-radius: 1vh;
+    background-color: #094067;
+    color: #d8eefe;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    padding: 0;
+    right: -220px;
+    transition: 1s;
+    top: 0;
+    font-size: 0;
+}
+
+.notification-ups {
+    right: 0;
+    padding: 3vh 3vh;
+    font-size: 1.8vh;
 }
 
 @media (max-width: 1200px) {
@@ -51,12 +174,63 @@
         width: 12vh;
     }
 
-}
+    .user-details-holder div .pages-col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
+    .db-profile-img {
+        margin-bottom: 2vh;
+    }
+
+    .db-up-holder input {
+        width: 100%;
+    }
+
+    .db-up-holder button {
+        width: 100%;
+    }
+
+
+
+
+}
 
 @media (max-width: 690px) {
     .cu-button-holder button {
         width: 12vh;
     }
 
+    .editsss svg {
+        font-size: 2vh;
+    }
+
+    .db-edit {
+        font-size: 1.7vh;
+    }
+
+    .user-details-holder {
+        padding: 0;
+    }
+
+
+
 }
+
+@media (max-width: 500px) {
+    .cu-button-holder button {
+        width: 12vh;
+    }
+
+    .editsss svg {
+        font-size: 1.7vh;
+    }
+
+    .db-edit {
+        font-size: 1.5vh;
+    }
+
+
+}
+
+@media (max-width: 400px) {}

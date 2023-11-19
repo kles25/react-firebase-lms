@@ -1,8 +1,8 @@
 import './App.css';
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { userInputs } from './FormSource';
-import { AuthContext } from './context/AuthContext';
-import { Routes, Route, Navigate } from "react-router-dom";
+// import { AuthContext } from './context/AuthContext';
+import { Routes, Route } from "react-router-dom";
 import Home from './pages/home/Home';
 import HomeStudent from './pages/dashboardstudent/homestudent/HomeStudent';
 import DashboardStudent from './pages/dashboardstudent/dashboardstudent/DashboardStudent';
@@ -38,11 +38,11 @@ import UserDetails from './pages/dashboardadmin/usersadmin/UserDetails';
 
 function App() {
 
-  const { currentUser } = useContext(AuthContext)
+  // const { currentUser } = useContext(AuthContext)
 
-  const RequireAuth = ({ children }) => {
-    return currentUser ? (children) : <Navigate to="/adminx/login" />
-  };
+  // const RequireAuth = ({ children }) => {
+  //   return currentUser ? (children) : <Navigate to="/adminx/login" />
+  // };
 
 
 
@@ -72,11 +72,11 @@ function App() {
         <Route path='/teacher/progress' element={<ProgressTeacher />} />
         <Route path='/teacher/profile' element={<ProfileTeacher />} />
       </Route>
-      <Route path='/admin' element={<DashboardAdmin />}>
-        <Route path='/admin/home' element={<HomeAdmin />} />
-        <Route path='/admin/course' element={<CourseAdmin />} />
-        <Route path='/admin/users' element={<UsersAdmin />} />
-        <Route path="/admin/:userId" element={<UserDetails />} />
+      <Route path="admin" element={<DashboardAdmin />}>
+        <Route path="home" element={<HomeAdmin />} />
+        <Route path="course" element={<CourseAdmin />} />
+        <Route path="users" element={<UsersAdmin />} />
+        <Route path=":userId" element={<UserDetails />} />
 
 
         <Route path="classes" element={<ClassesAdmin />} />
@@ -84,9 +84,9 @@ function App() {
       </Route>
 
       <Route path='/adminx' element={
-        <RequireAuth>
-          <SADashboard />
-        </RequireAuth>
+
+        <SADashboard />
+
       }>
         <Route path='/adminx/user' element={<User />} />
       </Route>

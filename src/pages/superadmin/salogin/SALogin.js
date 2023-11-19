@@ -1,33 +1,33 @@
-import { useContext, useState } from "react";
+// import { useState } from "react";
 import "./salogin.css";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import { auth } from "../../../config/firebase";
-import { AuthContext } from "../../../context/AuthContext";
+// import { signInWithEmailAndPassword } from "firebase/auth";
+// import { useNavigate } from "react-router-dom";
+// import { auth } from "../../../config/firebase";
+// import { AuthContext } from "../../../context/AuthContext";
 
 
 function SALogin() {
-    const [error, setError] = useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [error, setError] = useState(false);
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const { dispatch } = useContext(AuthContext)
+    // const { dispatch } = useContext(AuthContext)
 
 
     const handleLogin = (e) => {
         e.preventDefault()
 
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                dispatch({ type: "LOGIN", payload: user })
-                navigate('/adminx/user')
-            })
-            .catch((error) => {
-                setError(true);
-            })
+        // signInWithEmailAndPassword(auth, email, password)
+        //     .then((userCredential) => {
+        //         const user = userCredential.user;
+
+        //         navigate('/adminx/user')
+        //     })
+        //     .catch((error) => {
+        //         setError(true);
+        //     })
     }
 
     return (
@@ -42,10 +42,10 @@ function SALogin() {
                             <div className="si-form-holder">
                                 <h2>Sign in as Super Admin</h2>
                                 <form onSubmit={handleLogin}>
-                                    <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)}></input>
+                                    {/* <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)}></input>
                                     <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}></input>
-                                    <button type="submit">Login</button>
-                                    {error && <span>Wrong email or password</span>}
+                                    <button type="submit">Login</button> */}
+                                    {/* {error && <span>Wrong email or password</span>} */}
                                 </form>
 
                             </div>

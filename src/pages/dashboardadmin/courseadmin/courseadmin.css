@@ -1,0 +1,60 @@
+.add-course-container {
+    padding: 2vh 0;
+    padding-left: 1vh;
+}
+
+.add-course-form {
+    min-height: 70vh;
+}
+
+.add-course-form input {
+    padding: .5vh;
+    font-size: 1.8vh;
+    width: 20vh;
+    height: 4.5vh;
+    color: #094067;
+    text-transform: capitalize;
+    border-radius: 1vh;
+    border: 1px solid #094067;
+    margin-bottom: 1vh;
+    margin-top: .5vh;
+    margin-right: 1vh;
+}
+
+
+
+.add-course-holder button {
+    padding: .5vh;
+    font-size: 1.8vh;
+    width: 15vh;
+    height: 4.5vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    margin-top: .5vh;
+    box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 0px 11px 5px #00000033 inset;
+    -moz-box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.2) inset;
+    background-color: #d8eefe;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    color: #094067;
+    transition: .5s;
+
+}
+
+.add-course-holder button:hover {
+    background-color: #094067;
+    color: #d8eefe;
+}
+
+.unit-holder {
+    padding: 1vh;
+    background-color: #094067;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+}
+
+.ac-bttn-hldr {
+    text-align: right;
+}
