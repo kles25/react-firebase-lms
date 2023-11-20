@@ -45,6 +45,7 @@ const Datatable = () => {
                     list.push({ id: doc.id, ...doc.data() });
                 });
                 setData(list);
+                console.log(list)
             },
             (error) => {
                 console.log(error);

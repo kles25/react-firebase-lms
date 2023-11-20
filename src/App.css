@@ -25,10 +25,9 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #d8eefe;
+  background: #094067;
   border-radius: 1vh;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2) inset;
-  transition: 1s;
 }
 
 /* Handle on hover */
@@ -360,7 +359,7 @@ body {
 }
 
 .db-nav-links {
-  color: #094067;
+  color: #d8eefe;
   transition: .5s;
   margin-bottom: 2vh;
 }
@@ -369,15 +368,19 @@ body {
   box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
   -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
   -moz-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2) inset;
-  background-color: #d8eefe;
+  background-color: #094067;
   border-radius: 1vh;
+}
+
+.db-nav-links:hover a {
+  color: #d8eefe;
 }
 
 .db-nav-links.active {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
   -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2) inset;
-  background-color: #d8eefe;
+  background-color: #094067;
   border-radius: 1vh;
 }
 
@@ -393,6 +396,10 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.db-nav-links.active a {
+  color: #d8eefe;
 }
 
 .db-nav-links a svg {

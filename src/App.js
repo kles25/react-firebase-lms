@@ -34,6 +34,7 @@ import UsersAdmin from './pages/dashboardadmin/usersadmin/UsersAdmin';
 import ClassesAdmin from './pages/dashboardadmin/classesadmin/ClassesAdmin';
 import AddUser from './components/dashboardcomponents/admincomponents/adduser/AddUser';
 import UserDetails from './pages/dashboardadmin/usersadmin/UserDetails';
+import AddCourse from './components/coursecomponents/AddCourse';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
       <Route path="admin" element={<DashboardAdmin />}>
         <Route path="home" element={<HomeAdmin />} />
         <Route path="course" element={<CourseAdmin />} />
+        <Route path="addcourse" element={<AddCourse />} />
         <Route path="users" element={<UsersAdmin />} />
         <Route path=":userId" element={<UserDetails />} />
 

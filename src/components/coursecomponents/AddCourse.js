@@ -10,6 +10,7 @@ const AddCourse = () => {
             units: [
                 {
                     unitTitle: '',
+                    unitDetails: '',
                     topics: ['']
                 }
             ]
@@ -25,6 +26,12 @@ const AddCourse = () => {
     const handleUnitChange = (e, courseIndex, unitIndex) => {
         const updatedCourses = [...courses];
         updatedCourses[courseIndex].units[unitIndex].unitTitle = e.target.value;
+        setCourses(updatedCourses);
+    };
+
+    const handleUnitDetailsChange = (e, courseIndex, unitIndex) => {
+        const updatedCourses = [...courses];
+        updatedCourses[courseIndex].units[unitIndex].unitDetails = e.target.value;
         setCourses(updatedCourses);
     };
 
@@ -51,26 +58,42 @@ const AddCourse = () => {
 
     const submitCourse = async () => {
         try {
-            await addDoc(collection(db, "courses"), {
-                courses,
-                timestamp: serverTimestamp()
-            });
+            for (const course of courses) {
+                await addDoc(collection(db, "courses"), {
+                    ...course,
+                    timestamp: serverTimestamp()
+                });
+            }
+            console.log('Courses submitted successfully!');
         } catch (err) {
             console.error(err);
         }
-
     };
+
+    // const submitCourse = async () => {
+    //     try {
+    //         await addDoc(collection(db, "courses"), {
+    //             ...courses,
+    //             timestamp: serverTimestamp()
+    //         });
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+
+    // };
 
     const displayCourses = courses.map((course, courseIndex) => (
         <div key={courseIndex}>
+            <div className='unit-holder'>
+                <input
+                    className='course-name'
+                    type="text"
+                    value={course.courseName}
+                    onChange={(e) => handleCourseChange(e, courseIndex)}
+                    placeholder="Enter Course Name"
+                />
+            </div>
 
-            <input
-                className='course-name'
-                type="text"
-                value={course.courseName}
-                onChange={(e) => handleCourseChange(e, courseIndex)}
-                placeholder={`Enter Course Name ${courseIndex + 1}`}
-            />
             {course.units.map((unit, unitIndex) => (
                 <div className='unit-holder' key={unitIndex}>
                     <input
@@ -79,10 +102,15 @@ const AddCourse = () => {
                         onChange={(e) => handleUnitChange(e, courseIndex, unitIndex)}
                         placeholder={`Enter Unit Title ${unitIndex + 1}`}
                     />
+                    <textarea
+                        value={unit.unitDetails}
+                        onChange={(e) => handleUnitDetailsChange(e, courseIndex, unitIndex)}
+                        placeholder={`Enter Unit Details ${unitIndex + 1}`}
+                        rows="4"
+                    >
+                    </textarea>
                     <br />
                     {unit.topics.map((topic, topicIndex) => (
-
-
                         <input
                             key={topicIndex}
                             type="text"
@@ -90,7 +118,6 @@ const AddCourse = () => {
                             onChange={(e) => handleTopicChange(e, courseIndex, unitIndex, topicIndex)}
                             placeholder={`Enter Topic ${topicIndex + 1}`}
                         />
-
                     ))}
                     <button onClick={() => addTopic(courseIndex, unitIndex)}>Add Topic</button>
 

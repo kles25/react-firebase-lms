@@ -1,11 +1,12 @@
 import React from "react";
-import AddCourse from "../../../components/coursecomponents/AddCourse";
 import "./courseadmin.css"
+import CourseList from "../../../components/coursecomponents/CourseList";
 
 function CourseAdmin() {
     return (
         <div>
-            <AddCourse />
+
+            <CourseList />
         </div>
     )
 }
